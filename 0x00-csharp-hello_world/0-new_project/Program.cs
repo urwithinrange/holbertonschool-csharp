@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace holbertonschool_csharp
+namespace _0_new_project
 {
     class Program
     {
