@@ -8,32 +8,19 @@ class List
             for (int i = 0; i < list1.Count; i++)
                 list3.Add(list1[i]);
             for (int k = 0; k < list2.Count; k++)
+                list3.Add(list2[k]);
+            for (int j = 0; j < list3.Count; j++)
             {
-                for (int j = 0; j < list1.Count; j++)
+                for (int jj = j + 1; jj < list3.Count; jj++)
                 {
-                    if (list1[j] == list2[k])
+                    if (list3[j] == list3[jj])
                     {
                         list3.Remove(list1[j]);
                         break;
                     }
-                    else if (j + 1 == list1.Count)
-                        list3.Add(list2[k]);
                 }
             }
-            int temp = 0;  
-  
-            for (int i = 0; i <= list3.Count; i++)  
-            {  
-                for (int j = i; j < list3.Count; j++)  
-                {  
-                    if (list3[i] > list3[j])  
-                    {  
-                        temp = list3[i];  
-                        list3[i] = list3[j];  
-                        list3[j] = temp;  
-                    }  
-                }  
-            }
+            list3.Sort();
             return list3;
         }
     }
