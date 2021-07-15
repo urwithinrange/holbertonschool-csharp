@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 class Dictionary
 {
-    public static void PrintSorted(Dictionary<string, string> myDict)
+    public static Dictionary<string, string> AddKeyValue(Dictionary<string, string> myDict, string key, string value)
     {
-        var list = myDict.Keys.ToList();
-        list.Sort();
-        foreach (var key in list)
-        {
-            Console.WriteLine($"{key}: {myDict[key]}");
-        }
-        
+        if (myDict.ContainsKey(key))
+            myDict[key] = value;
+        else
+            myDict.Add(key, value);
+        return myDict;
     }
 }
