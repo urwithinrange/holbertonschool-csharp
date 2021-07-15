@@ -4,23 +4,20 @@ class List
     {
         public static List<int> DifferentElements(List<int> list1, List<int> list2)
         {
-            List<int> list3 = new List<int>();
+            HashSet<int> set1 = new HashSet<int>();
+            HashSet<int> set2 = new HashSet<int>();
+
             for (int i = 0; i < list1.Count; i++)
-                list3.Add(list1[i]);
+                set1.Add(list1[i]);
             for (int k = 0; k < list2.Count; k++)
-                list3.Add(list2[k]);
-            for (int j = 0; j < list3.Count; j++)
+                set2.Add(list2[k]);
+            set1.SymmetricExceptWith(set2);
+            List<int> newList = new List<int>();
+            foreach (int a in set1)
             {
-                for (int jj = j + 1; jj < list3.Count; jj++)
-                {
-                    if (list3[j] == list3[jj])
-                    {
-                        list3.Remove(list1[j]);
-                        break;
-                    }
-                }
+                newList.Add(a);
             }
-            list3.Sort();
-            return list3;
+            newList.Sort();
+            return newList;
         }
     }
