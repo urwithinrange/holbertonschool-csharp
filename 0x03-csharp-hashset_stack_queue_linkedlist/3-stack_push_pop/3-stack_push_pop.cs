@@ -14,8 +14,10 @@ class MyStack
             Console.WriteLine($"Stack contains \"{search}\": True");
         else
             Console.WriteLine($"Stack contains \"{search}\": False");
-        while ((aStack.Peek() != search || aStack.Peek() == search) && aStack.Contains(search))
+        while (size != 0 && (aStack.Peek() != search || aStack.Peek() == search) && aStack.Contains(search))
+        {
             aStack.Pop();            
+        }
         aStack.Push(newItem);
         return aStack;
     }
