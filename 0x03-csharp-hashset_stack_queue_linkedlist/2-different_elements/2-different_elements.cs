@@ -26,7 +26,20 @@ class List
                         list3.Add(list2[k]);
                 }
             }
-            list3.Sort();
+            int temp = 0;  
+  
+            for (int i = 0; i <= list3.Count; i++)  
+            {  
+                for (int j = i; j < list3.Count; j++)  
+                {  
+                    if (list3[i] > list3[j])  
+                    {  
+                        temp = list3[i];  
+                        list3[i] = list3[j];  
+                        list3[j] = temp;  
+                    }  
+                }  
+            }
             return list3;
         }
     }
