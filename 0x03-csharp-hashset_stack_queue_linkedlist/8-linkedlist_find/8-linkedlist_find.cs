@@ -10,7 +10,6 @@ class LList
             if (item == value)
                 return pos;
             pos++;
-
         }
         return -1;
     }
