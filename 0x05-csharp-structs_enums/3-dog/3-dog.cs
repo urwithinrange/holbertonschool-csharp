@@ -19,6 +19,6 @@ public struct Dog
     }
     public override string ToString()
     {
-        return base.ToString() + " Name: " + name.ToString() + "\n" + "Age: " + age.ToString() + "\n" + "owner: " + owner.ToString() + "\n" + "Rating: " + rating.ToString();
+        return base.ToString() + " Name: " + name.ToString() + "\n" + "Age: " + age.ToString() + "\n" + "Owner: " + owner.ToString() + "\n" + "Rating: " + rating.ToString();
     }
 }
