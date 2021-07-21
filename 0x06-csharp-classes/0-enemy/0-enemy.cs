@@ -2,6 +2,7 @@
 
 namespace Enemies
 {
+    ///<summary>class Zombie</summary>
     class Zombie
     {
     }
