@@ -7,10 +7,13 @@ namespace Enemies
     {
         ///<summary>Zombie health field</summary>
         public int health;
+        
         ///<summary>Zombie public constructor</summary>
         public Zombie()
         {
         }
+
+        ///<summary>Zombie public constructor sets health to value</summary>
         public Zombie(int value)
         {
             if (value < 0)
