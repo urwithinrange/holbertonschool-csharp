@@ -7,11 +7,10 @@ namespace MyMath
     /// <summary>Matrix Class</summary>
     public class Matrix
     {
-        /// <summary>
-        /// Prototype to divide a matrix
+        /// <summary>Prototype to divide a matrix</summary>
         /// <param name="matrix">Array of a fixed size</param>
         /// <param name="num">Is the divided const</param>
-        ///</summary>
+        
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (matrix == null || num == 0)
