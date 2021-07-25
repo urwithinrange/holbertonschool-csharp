@@ -10,6 +10,7 @@ namespace MyMath
         /// <summary>Prototype to divide a matrix</summary>
         /// <param name="matrix">Array of a fixed size</param>
         /// <param name="num">Is the divided const</param>
+        /// <returns>a new matrix containing divided elements</returns>
         
         public static int[,] Divide(int[,] matrix, int num)
         {
