@@ -10,10 +10,11 @@ namespace MyMath.Tests
         {
             // arrange
             int sum_total;
+            int test_sum = 1 + 2;
             // act
             sum_total = Operations.Add(1, 2);
             // assert
-            Assert.IsInstanceOf<int>( sum_total, "Integer is being returned");
+            Assert.AreEqual(sum_total, test_sum);
         }
     }
 }
