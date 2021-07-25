@@ -6,9 +6,7 @@ namespace MyMath
     ///<summary>Matrix Class.</summary>
     public class Matrix
     {
-        ///<summary>
-        /// Prototype to divide a matrix.
-        ///</summary>
+        ///<summary>Gets quotient of a matrix's values divided by num.</summary>
         ///<param name="matrix">Array of a fixed size.</param>
         ///<param name="num">Is the divided const.</param>
         ///<returns>a new matrix containing divided elements.</returns>
