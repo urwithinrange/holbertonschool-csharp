@@ -9,8 +9,7 @@ namespace MyMath
         ///<summary>Gets quotient of a matrix's values divided by num.</summary>
         ///<param name="matrix">Array of a fixed size.</param>
         ///<param name="num">Is the divided const.</param>
-        ///<returns>a new matrix containing divided elements.</returns>
-        
+        ///<returns>a new matrix containing divided elements.</returns>        
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (matrix == null || num == 0)
