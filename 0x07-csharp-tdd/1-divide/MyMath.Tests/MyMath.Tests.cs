@@ -6,6 +6,7 @@ namespace MyMath.Tests
     [TestFixture]
     public class MyMathTests
     {
+        /// <summary>Test to check if matrix exist</summary>
         [Test]
         public void test_NumbersNotNull_ReturnTrue()
         {
@@ -17,7 +18,7 @@ namespace MyMath.Tests
             // Assert            
             Assert.AreEqual(div, i);
         }
-
+        /// <summary>Test to determine outcome if num is equal to 0</summary>
         [Test]
         public void test_NumEquals0_ReturnTrue()
         {
@@ -30,6 +31,7 @@ namespace MyMath.Tests
             // Assert
             Assert.IsNull(div);
         }
+        /// <summary>Test to determine outcome if matrix is null</summary>
         [Test]
         public void test_MatrixIsNull_ReturnTrue()
         {
