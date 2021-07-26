@@ -2,12 +2,12 @@ using NUnit.Framework;
 
 namespace MyMath.Tests
 {
-    /// <summary>Division Testing folder</summary>
     [TestFixture]
+    /// <summary>Division Testing folder</summary>
     public class MyMathTests
     {
-        /// <summary>Test Matrix.Divide() returns correct output</summary>
         [Test]
+        /// <summary>Test Matrix.Divide() returns correct output</summary>
         public void test_NumbersNotNull_ReturnTrue()
         {
             // Assign
@@ -18,8 +18,8 @@ namespace MyMath.Tests
             // Assert            
             Assert.AreEqual(div, i);
         }
-        /// <summary>Test to determine outcome if num is equal to 0</summary>
         [Test]
+        /// <summary>Test to determine outcome if num is equal to 0</summary>
         public void test_NumEquals0_ReturnTrue()
         {
             // Assign
@@ -31,8 +31,8 @@ namespace MyMath.Tests
             // Assert
             Assert.IsNull(div);
         }
-        /// <summary>Test to determine outcome if matrix is null</summary>
         [Test]
+        /// <summary>Test to determine outcome if matrix is null</summary>
         public void test_MatrixIsNull_ReturnTrue()
         {
             // Assign
