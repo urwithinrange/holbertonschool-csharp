@@ -20,5 +20,10 @@ namespace Text.Tests
         {
             Assert.IsTrue(Str.IsPalindrome("A man, a plan") == false);
         }
+        [Test]
+        public void EmptyString_IsPalindrome_ReturnTrue()
+        {
+            Assert.IsTrue(Str.IsPalindrome("") == true);
+        }
     }
 }
