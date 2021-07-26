@@ -12,11 +12,13 @@ namespace Text
         public static bool IsPalindrome(string s)
         {
             var letters = new StringBuilder();
-            foreach (char element in s)
+            s = s.ToLower();
+            char[] str = s.ToCharArray();
+            for (int x = 0; x < str.Length; x++)
             {
-                if (element >= 'A' && element <= 'Z' || element >= 'a' &&  element <= 'z')
+                if (str[x] >= 'a' && str[x] <= 'z')
                 {
-                    letters.Append(element);
+                    letters.Append(str[x]);
                 }
             }
             int j = letters.Length - 1;

@@ -18,7 +18,7 @@ namespace Text.Tests
         [Test]
         public void SimpleString_IsNotPalindrome_ReturnFalse()
         {
-            Assert.IsFalse(Str.IsPalindrome("A man, a plan") == false);
+            Assert.IsTrue(Str.IsPalindrome("A man, a plan") == false);
         }
     }
 }
