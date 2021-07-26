@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace MyMath.Tests
 {
-    /// <summary>Testing folder</summary>
+    /// <summary>Division Testing folder</summary>
     [TestFixture]
     public class MyMathTests
     {

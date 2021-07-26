@@ -6,10 +6,10 @@ namespace MyMath
     /// <summary>Matrix Class.</summary>
     public class Matrix
     {
-        /// <summary>Gets quotient of a matrix's values divided by num.</summary>
+        /// <summary>Gets quotient of<paramref name="matrix"/> values divided by <paramref name="num"/>.</summary>
         /// <param name="matrix">Array of a fixed size.</param>
         /// <param name="num">Is the divided const.</param>
-        /// <Returns>a new matrix containing divided elements.</Returns>        
+        /// <returns>matrix containing divided elements.</returns>
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (matrix == null || num == 0)
@@ -25,7 +25,7 @@ namespace MyMath
                     matrix[i, j] = matrix[i, j] / num;
                 }
             }
-            return matrix;            
+            return matrix;
         }
     }
 }
