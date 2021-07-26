@@ -6,7 +6,7 @@ namespace MyMath.Tests
     [TestFixture]
     public class MyMathTests
     {
-        /// <summary>Test to check if matrix exist</summary>
+        /// <summary>Test Matrix.Divide() returns correct output</summary>
         [Test]
         public void test_NumbersNotNull_ReturnTrue()
         {
