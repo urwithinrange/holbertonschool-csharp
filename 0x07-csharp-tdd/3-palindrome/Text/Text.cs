@@ -14,7 +14,7 @@ namespace Text
             var letters = new StringBuilder();
             foreach (char element in s)
             {
-                if (element >= 'A' && element <= 'Z' && element >= 'a' &&  element <= 'Z')
+                if (element >= 'A' && element <= 'Z' || element >= 'a' &&  element <= 'z')
                 {
                     letters.Append(element);
                 }
