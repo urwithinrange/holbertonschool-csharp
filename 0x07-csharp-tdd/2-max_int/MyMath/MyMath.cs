@@ -9,7 +9,11 @@ namespace MyMath
         /// <summary>Gets the max number in a list</summary>
         public static int Max(List<int> nums)
         {
-            int temp = 0;
+            int temp;
+            if (nums.Count == 0)
+                temp = 0;
+            else
+                temp = nums[0];
             for (int i = 0; i < nums.Count; i++)
             {
                 if (nums[i] > temp)
