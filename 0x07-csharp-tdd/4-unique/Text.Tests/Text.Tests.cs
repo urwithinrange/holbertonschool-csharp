@@ -26,5 +26,19 @@ namespace Text.Tests
             int i = Str.UniqueChar(str);
             Assert.AreEqual(i, -1);
         }
+        [Test]
+        public void FindUniqueChar_StrintIsEmpty_ReturnEqualsNeg1()
+        {
+            string str = "";
+            int i = Str.UniqueChar(str);
+            Assert.AreEqual(i, -1);
+        }
+        [Test]
+        public void FindUniqueChar_CharIsLast_ReturnEquals()
+        {
+            string str = "bbccdda";
+            int i = Str.UniqueChar(str);
+            Assert.AreEqual(i, 6);
+        }
     }
 }
