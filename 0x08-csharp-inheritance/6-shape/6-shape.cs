@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-/// <summary>Shapeclass</summary>
+/// <summary>Shape is Baseclass</summary>
 class Shape
 {
     /// <summary>Method returns new Exception</summary>
@@ -10,6 +10,7 @@ class Shape
         throw new NotImplementedException("Area() is not implemented");
     }
 }
+/// <summary>Rectangle is subclass</summary>
 class Rectangle : Shape
 {
     private int width;
