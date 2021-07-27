@@ -8,12 +8,16 @@ namespace Text
         ///<summary>Counts the number of words in a string</summary>
         public static int CamelCase(string s)
         {
-            int i = 0;
+            int i;
             if (s.Length == 0)
             {
-                return i;
+                return 0;
             }
-            i++;
+            if (Char.IsUpper(s[0]))
+            {    
+                return 1;
+            }
+            i = 1;
             foreach (char c in s)
             {
                 if (Char.IsUpper(c) == true)

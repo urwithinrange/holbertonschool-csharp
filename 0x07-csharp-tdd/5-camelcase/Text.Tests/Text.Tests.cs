@@ -5,7 +5,7 @@ namespace Text.Tests
     public class CamelCaseTests
     {
         [Test]
-        public void CamelCase_NumberOfWords_ReturnEquals4()
+        public void CamelCase_MultipleWords_ReturnEquals4()
         {
             int i = Str.CamelCase("thisIsAString");
             Assert.AreEqual(i, 4);
@@ -15,6 +15,18 @@ namespace Text.Tests
         {
             int i = Str.CamelCase("");
             Assert.AreEqual(i, 0);
+        }
+        [Test]
+        public void CamelCase_OneWord_ReturnEquals1()
+        {
+            int i = Str.CamelCase("whatever");
+            Assert.AreEqual(i, 1);
+        }
+        [Test]
+        public void CamelCase_TwoWords_ReturnEquals2()
+        {
+            int i = Str.CamelCase("twoWords");
+            Assert.AreEqual(i, 2);
         }
     }
 }
