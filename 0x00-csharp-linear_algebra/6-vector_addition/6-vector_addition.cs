@@ -1,6 +1,8 @@
 ﻿using System;
+/// <summary>VectorMath class</summary>
 class VectorMath
 {
+    /// <summary>Module that returns a vector for a 2d array or 3d array</summary>
     public static double[] Add(double[] vector1, double[] vector2)
     {
         if (vector1.Length == 2 && vector2.Length == 2)
