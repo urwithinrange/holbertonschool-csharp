@@ -10,7 +10,7 @@ class MatrixMath
         {
             return new double[,] {{matrix[0, 0] * scalar, matrix[0, 1] * scalar}, {matrix[1, 0] * scalar, matrix[1, 1] * scalar}};
         }
-        if (matrix.GetLength(0) == 3 && matrix.GetLength(1) == 3 && matrix.GetLength(2) == 3)
+        if (matrix.GetLength(0) == 3 && matrix.GetLength(1) == 3)
         {
             return new double[,] {{matrix[0, 0] * scalar, matrix[0, 1] * scalar, matrix[0, 2] * scalar}, {matrix[1, 0] * scalar, matrix[1, 1] * scalar, matrix[1, 2] * scalar}, {matrix[2, 0] * scalar, matrix[2, 1] * scalar, matrix[2, 2] * scalar}};
         }
