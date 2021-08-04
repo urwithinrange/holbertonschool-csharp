@@ -72,10 +72,11 @@ class Queue<T>
         {
             Console.WriteLine("Queue is empty");
         }
-        else
+        Node temp = head;
+        while (temp != null)
         {
-            Console.WriteLine(head.value);
-            head = head.next;
+            Console.WriteLine(temp.value);
+            temp = temp.next;
         }
     }
     /// <summary>Method that returns the number of nodes in the queue</summary>
