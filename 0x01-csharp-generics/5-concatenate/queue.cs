@@ -73,35 +73,36 @@ class Queue<T>
         {
             Console.WriteLine("Queue is empty");
         }
-        while (head != null)
+        Node temp = head;
+        while (temp != null)
         {
-            Console.WriteLine(head.value);
-            head = head.next;
+            Console.WriteLine(temp.value);
+            temp = temp.next;
         }
     }
     /// <summary>Method that concatenates all values in the queue only if the queue is of type String or Char.</summary>
     public string Concatenate()
     {
+        string str = "";
         if (head == null)
         {
            Console.WriteLine("Queue is empty");
            return null;
         }
-        string temp = head.value;
-        while (head != null)
+        if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
         {
-            if (typeof(head.value) == typeof(String) || typeof(head.value) == typeof(Char))
-            {
-                head = head.next;
-                temp += " " + head.value;
-            }
-            else if (typeof(head.value) != typeof(String) || typeof(head.value) != typeof(Char))
-            {
-                System.Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
-                return null;
-            }
+            System.Console.WriteLine("Concatenate is for a queue of Strings or Chars only.");
+            return null;
+        }        
+        Node temp = head;
+        while (temp != null)
+        {
+            str += temp.value.ToString();
+            if (typeof(T) == typeof(string) && temp.next != null)
+                str += " ";
+            temp = temp.next;
         }
-        return T;
+        return str;
     }
     /// <summary>Method that returns the number of nodes in the queue</summary>
     public int Count()
