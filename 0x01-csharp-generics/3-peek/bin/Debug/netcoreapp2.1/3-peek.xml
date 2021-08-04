@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3-peek</name>
+    </assembly>
+    <members>
+        <member name="T:Queue`1">
+            <summary>Queue class</summary>
+        </member>
+        <member name="F:Queue`1.head">
+            <summary>Node class</summary>
+        </member>
+        <member name="M:Queue`1.Node.#ctor(`0)">
+            <summary>Method that takes a value for a new node and sets it</summary>
+        </member>
+        <member name="M:Queue`1.Enqueue(`0)">
+            <summary>Method to the class Queue that crates a new Node and adds it to the end of queue</summary>
+        </member>
+        <member name="M:Queue`1.Peek">
+            <summary>Method that returns the value of the first node</summary>
+        </member>
+        <member name="M:Queue`1.Dequeue">
+            <summary>Method that removes the first node and returns its value</summary>
+        </member>
+        <member name="M:Queue`1.Count">
+            <summary>Method that returns the number of nodes in the queue</summary>
+        </member>
+        <member name="M:Queue`1.CheckType">
+            <summary>Method checktype is going to rerturn the queue's type</summary>
+        </member>
+    </members>
+</doc>
