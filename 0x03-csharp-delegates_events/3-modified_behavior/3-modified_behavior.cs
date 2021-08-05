@@ -1,6 +1,16 @@
 ﻿using System;
 /// <summary>Delegate for health</summary>
 public delegate void CalculateHealth(float f);
+/// <summary>Delegate for Modifier</summary>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
+
+/// <summary>Enum for Player</summary>
+public enum Modifier
+{
+    Weak,
+    Base,
+    Strong
+}
 
 /// <summary>class Player</summary>
 public class Player
@@ -33,9 +43,22 @@ public class Player
     public void TakeDamage(float damage)
     {
         
-        if (damage < 0)
+        if (damage < 0.0f)
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
+        }
+        else
+            System.Console.WriteLine($"{name} takes {damage} damage!");
+        hp -= damage;
+        ValidateHP(hp);
+    }
+    /// <summary>Method that follows CalculateHealth</summary>
+    public void HealDamage(float heal)
+    {
+        
+        if (heal < 0.0f)
+        {
+            System.Console.WriteLine($"{name} heals 0 HP!");
         }
         else
         {
@@ -44,20 +67,7 @@ public class Player
         }
         ValidateHP(hp);
     }
-    /// <summary>Method that follows CalculateHealth</summary>
-    public void HealDamage(float heal)
-    {
-        
-        if (heal < 0)
-        {
-            System.Console.WriteLine($"{name} heals 0 HP!");
-        }
-        else
-            System.Console.WriteLine($"{name} heals {heal} HP!");
-        hp += heal;
-        ValidateHP(hp);
-    }
-    /// <summary>Method that sets the new value of the Player’s.</summary>
+    /// <summary>Method that sets the new value of the Player’s health.</summary>
     public void ValidateHP(float newHp)
     {
         if (newHp < 0)
@@ -66,5 +76,15 @@ public class Player
             hp = maxHp;
         else
             hp = newHp;        
+    }
+    /// <summary>Method that modifies the damage multiplyer.</summary>
+    public float ApplyModifier(float baseValue, Modifier modifier)
+    {
+        if (modifier is Modifier.Weak)
+            return baseValue *= 0.5f;
+        if (modifier is Modifier.Strong)
+            return baseValue *= 1.5f;
+        else
+            return baseValue;
     }
 }
