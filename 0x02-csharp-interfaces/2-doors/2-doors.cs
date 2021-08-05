@@ -33,25 +33,16 @@ interface ICollectable
     void Collect();
 }
 /// <summary>public class that interacts from base class</summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+public class Door : Base, IInteractive
 {
-    /// <summary>Read-write instance property.</summary>
-    public int durability { get; set; }
-    /// <summary>Read-write instance property.</summary>
-    public bool isCollected { get; set; }
+    /// <summary>Public Constructor</summary>
+    public Door(string door = "Door")
+    {
+        name = door;
+    }
     /// <summary>Inherited Method</summary>
     public void Interact()
     {
-        throw new NotImplementedException();
-    }
-    /// <summary>Inherited Method</summary>
-    public void Collect()
-    {
-        throw new NotImplementedException();
-    }
-    /// <summary>Inherited Method</summary>
-    public void Break()
-    {
-        throw new NotImplementedException();
+        Console.WriteLine($"You try to open the {name}. It's locked.");
     }
 }
