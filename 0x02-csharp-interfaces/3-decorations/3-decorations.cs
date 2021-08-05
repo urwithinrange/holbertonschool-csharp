@@ -67,7 +67,7 @@ public class Decoration : Base, IInteractive, IBreakable
     /// <summary>Inherited Method</summary>
     public void Interact()
     {
-        if (durability == 0)
+        if (durability <= 0)
         {
             System.Console.WriteLine($"The {name} has been broken.");
         }
