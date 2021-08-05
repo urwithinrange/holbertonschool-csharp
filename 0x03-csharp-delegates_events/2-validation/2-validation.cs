@@ -38,10 +38,8 @@ public class Player
             System.Console.WriteLine($"{name} takes 0 damage!");
         }
         else
-        {
-            System.Console.WriteLine($"{name} heals {heal} HP!");
-            hp += heal;
-        }
+            System.Console.WriteLine($"{name} takes {damage} damage!");
+        hp -= damage;
         ValidateHP(hp);
     }
     /// <summary>Method that follows CalculateHealth</summary>
@@ -53,8 +51,10 @@ public class Player
             System.Console.WriteLine($"{name} heals 0 HP!");
         }
         else
+        {
             System.Console.WriteLine($"{name} heals {heal} HP!");
-        hp += heal;
+            hp += heal;
+        }
         ValidateHP(hp);
     }
     /// <summary>Method that sets the new value of the Player’s.</summary>
