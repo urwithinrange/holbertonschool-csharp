@@ -1,4 +1,5 @@
 ﻿using System;
+/// <summary>Delegate for health</summary>
 public delegate void CalculateHealth(float f);
 
 /// <summary>class Player</summary>

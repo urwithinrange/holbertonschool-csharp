@@ -32,6 +32,7 @@ public class Player
     /// <summary>Method that follows CalculateHealth</summary>
     public void TakeDamage(float damage)
     {
+        
         if (damage < 0)
         {
             System.Console.WriteLine($"{name} takes 0 damage!");
@@ -44,6 +45,7 @@ public class Player
     /// <summary>Method that follows CalculateHealth</summary>
     public void HealDamage(float heal)
     {
+        
         if (heal < 0)
         {
             System.Console.WriteLine($"{name} heals 0 HP!");
@@ -57,7 +59,7 @@ public class Player
     public void ValidateHP(float newHp)
     {
         if (newHp < 0)
-            newHp = 0;
+            hp = 0;
         else if (newHp > maxHp)
             hp = maxHp;
         else
