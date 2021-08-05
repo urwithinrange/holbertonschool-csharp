@@ -7,8 +7,11 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 /// <summary>Enum for Player</summary>
 public enum Modifier
 {
+    /// <summary>weak aginst</summary>
     Weak,
+    /// <summary>base of player</summary>
     Base,
+    /// <summary>Stromg aginst</summary>
     Strong
 }
 
