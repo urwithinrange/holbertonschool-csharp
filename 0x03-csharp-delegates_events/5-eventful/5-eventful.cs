@@ -133,7 +133,7 @@ public class Player
         }
     }
     /// <summary>Method for HPwarning events.</summary>
-    public void HPValueWarning(object sender, CurrentHPArgs e)
+    private void HPValueWarning(object sender, CurrentHPArgs e)
     {
         if (e.currentHp == 0)
         {
